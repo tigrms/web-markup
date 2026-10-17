@@ -1,1 +1,28 @@
-/* add all items from grading group 3 and 4. Search for items in group 5 that refer to css f.e. z index */ 
+body {
+	margin: 2rem;
+	font-family: Arial, sans-serif;
+	color: #242424;
+	line-height: 1.6;
+}
+
+h1, h2 {
+	color: #242424;
+}
+
+a {
+	color: #b93625;
+}
+
+nav ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+.logo img {
+	vertical-align: middle;
+	margin-right: 0.75rem;
+}
+
+.site-footer {
+	margin-top: 3rem;
+}
