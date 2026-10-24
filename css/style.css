@@ -1,28 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600&family=Source+Sans+3:wght@400;600&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
 body {
-	margin: 2rem;
-	font-family: Arial, sans-serif;
+	margin: 0;
 	color: #242424;
+	background-color: #fff;
+	font-family: 'Source Sans 3', Arial, sans-serif;
+	font-size: 1.125rem;
 	line-height: 1.6;
+	word-spacing: 0.02em;
 }
 
-h1, h2 {
+.site-header, main, .site-footer {
+	width: 92%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.site-header {
+	padding: 1.5rem 0;
+	border-bottom: 1px solid #d8d8d5;
+}
+
+.logo {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.75rem;
 	color: #242424;
-}
-
-a {
-	color: #b93625;
+	font-family: 'Outfit', Arial, sans-serif;
+	font-size: 1.3rem;
+	text-decoration: none;
 }
 
 nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 1.5rem;
+	margin: 1rem 0 0;
 	padding: 0;
 	list-style-type: none;
 }
 
-.logo img {
-	vertical-align: middle;
+nav a {
+	display: block;
+	padding: 0.5rem 0;
+	color: #242424;
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+a {
+	color: #a72e1f;
+}
+
+a:hover, a:focus {
+	color: #752014;
+	text-decoration: underline;
+}
+
+a:active, nav .current {
+	color: #b93625;
+	text-decoration: underline;
+}
+
+a:focus, input:focus, textarea:focus, select:focus {
+	outline: 2px solid #242424;
+	outline-offset: 3px;
+}
+
+h1, h2, h3 {
+	font-family: 'Outfit', Arial, sans-serif;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+h1 {
+	margin: 1rem 0;
+	font-size: 2.5rem;
+}
+
+h2 {
+	margin: 0 0 1rem;
+	font-size: 1.6rem;
+}
+
+h3 {
+	margin: 0 0 0.75rem;
+	font-size: 1.3rem;
+}
+
+p {
+	margin: 0 0 1rem;
+}
+
+main > section, main > article {
+	margin-bottom: 2rem;
+}
+
+.intro {
+	padding: 2.5rem 0;
+}
+
+.intro > p {
+	max-width: 48rem;
+}
+
+figure {
+	min-height: 2rem;
+	margin: 0;
+}
+
+figure > img {
+	position: relative;
+	top: 2px;
+	float: left;
 	margin-right: 0.75rem;
 }
 
+figcaption {
+	padding-top: 0.25rem;
+	color: #a72e1f;
+	font-size: 0.8rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.button, input[type="submit"] {
+	display: inline-block;
+	padding: 0.65em 1.2em;
+	border: 1px solid #b93625;
+	border-radius: 3px;
+	color: #fff;
+	background-color: #b93625;
+	font: inherit;
+	font-weight: 600;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.button:hover, input[type="submit"]:hover {
+	border-color: #98291b;
+	color: #fff;
+	background-color: #98291b;
+	text-decoration: none;
+}
+
+.button:active, input[type="submit"]:active {
+	background-color: #752014;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1.25rem;
+}
+
+.two-columns {
+	grid-template-columns: 1fr 1fr;
+}
+
+.cards-title {
+	grid-column: 1 / -1;
+	margin-bottom: 0;
+}
+
+.card {
+	padding: 1.5rem;
+	border-color: #dededb;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #f2f2f0;
+}
+
+.card ul, .checklist {
+	padding-left: 1.5rem;
+}
+
+li {
+	margin-bottom: 0.5rem;
+}
+
+.address, .source, .form-note {
+	font-size: 1rem;
+}
+
+.tip {
+	margin: 2rem 0;
+	padding: 1.25rem;
+	border-left: 4px solid #b93625;
+	background-color: #f2f2f0;
+}
+
+.tip p:last-child, .card p:last-child {
+	margin-bottom: 0;
+}
+
+table {
+	width: 100%;
+	margin: 1rem 0;
+	border-collapse: collapse;
+	font-size: 1rem;
+}
+
+caption {
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+	text-align: left;
+}
+
+th, td {
+	padding: 0.75rem;
+	border: 1px solid #767676;
+	text-align: left;
+}
+
+thead {
+	color: #fff;
+	background-color: #242424;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #cff;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: #fff;
+}
+
+tbody th:first-child {
+	background-color: #f2f2f0;
+}
+
+.budget-example {
+	padding: 1.5rem;
+	border: 1px solid #dededb;
+}
+
+.budget-amount {
+	color: #a72e1f;
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.intro-text {
+	text-indent: 1em;
+}
+
+.intro-text::first-letter {
+	color: #a72e1f;
+	font-size: 1.3em;
+	font-weight: 600;
+}
+
 .site-footer {
-	margin-top: 3rem;
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 1.5rem 0;
+	border-top: 1px solid #d8d8d5;
+	font-size: 1rem;
 }
