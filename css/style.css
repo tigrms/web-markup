@@ -263,3 +263,154 @@ tbody th:first-child {
 	border-top: 1px solid #d8d8d5;
 	font-size: 1rem;
 }
+
+
+/* Small screens use one column so the text and form stay readable. */
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	padding-bottom: 5rem;
+}
+
+main {
+	flex-grow: 1;
+}
+
+.cards, .two-columns {
+	grid-template-columns: 1fr;
+}
+
+nav ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.25rem 1rem;
+}
+
+nav li {
+	margin: 0;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+.intro {
+	padding: 2rem 0;
+}
+
+th, td {
+	padding: 0.4rem;
+}
+
+.site-footer {
+	flex-wrap: wrap;
+}
+
+.contact-section {
+	max-width: 40rem;
+}
+
+fieldset {
+	min-width: 0;
+	margin: 1rem 0 1.5rem;
+	padding: 1.25rem;
+	border: 1px solid #767676;
+}
+
+legend {
+	padding: 0 0.5rem;
+	font-weight: 600;
+}
+
+label {
+	display: block;
+	margin-bottom: 0.35rem;
+}
+
+input, textarea, select {
+	width: 100%;
+	margin-bottom: 1rem;
+	padding: 0.65rem;
+	border: 1px solid #767676;
+	border-radius: 2px;
+	color: #242424;
+	background-color: #fff;
+	font: inherit;
+}
+
+textarea {
+	resize: vertical;
+}
+
+input[type="submit"] {
+	width: auto;
+}
+
+.cookies {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	padding: 0.6rem 4%;
+	border-top: 1px solid #767676;
+	color: #242424;
+	background-color: #f2f2f0;
+	font-size: 0.9rem;
+}
+
+.cookies p {
+	margin: 0;
+}
+
+/* The assessment uses 768px as the smartphone boundary. */
+@media screen and (min-width: 769px) {
+	nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.cards, .two-columns {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	th, td {
+		padding: 0.75rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.cards {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.two-columns {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.site-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+	}
+
+	nav {
+		flex-grow: 1;
+	}
+
+	nav ul {
+		margin: 0;
+		gap: 1rem;
+	}
+
+	.logo {
+		flex-shrink: 0;
+	}
+}
+
