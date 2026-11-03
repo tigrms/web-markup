@@ -1,80 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Tiger Meuter">
-	<meta name="description" content="Use the Late Night Eats contact form to practise sending a question or reporting an incorrect detail about the food guide.">
-	<meta name="keywords" content="late-night food, The Hague, restaurants, opening hours, budget">
-	<title>Contact | Late Night Eats</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="icon" type="image/svg+xml" href="img/logo.svg">
-</head>
-<body>
-	<header class="site-header">
-		<a class="logo" href="index.html"><img src="img/logo.svg" alt="" title="Late Night Eats logo">Late Night Eats</a>
-		<nav aria-label="Main navigation">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="food-options.html">Food options</a></li>
-				<li><a href="opening-hours.html">Opening hours</a></li>
-				<li><a href="plan-your-visit.html">Plan your visit</a></li>
-				<li><a href="food-on-a-budget.html">Food on a budget</a></li>
-				<li><a class="current" aria-current="page" href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<header class="intro">
-			<figure>
-				<img src="img/contact.svg" alt="" title="Contact icon">
-				<figcaption>Helping you find late-night food</figcaption>
-			</figure>
-			<h1>Ask a question or flag an error</h1>
-			<p>Have a question about the guide, or noticed something that needs changing? Use the form below.</p>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Tiger Meuter">
+		<meta name="description" content="Use the Late Night Eats contact form to practise sending a question or reporting an incorrect detail about the food guide.">
+		<meta name="keywords" content="late-night food, The Hague, restaurants, opening hours, budget">
+		<title>Contact | Late Night Eats</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="icon" type="image/svg+xml" href="img/logo.svg">
+	</head>
+	<body>
+		<header>
+			<a class="logo" href="index.html"><img src="img/logo.svg" alt="" title="Late Night Eats logo">Late Night Eats</a>
+			<nav aria-label="Main navigation">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="food-options.html">Food options</a></li>
+					<li><a href="opening-hours.html">Opening hours</a></li>
+					<li><a href="plan-your-visit.html">Plan your visit</a></li>
+					<li><a href="food-on-a-budget.html">Food on a budget</a></li>
+					<li><a class="current" aria-current="page" href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
 		</header>
-		<section class="contact-section">
-			<h2>Your question or correction</h2>
-			<p>Fields marked required must be filled in.</p>
-			<p class="form-note">testing form</p>
-			<form action="https://next-app-router-playground-kohl.vercel.app/api/contact" method="post">
-				<fieldset>
-					<legend>Your details</legend>
-					<label for="name">Name (required)</label>
-					<input type="text" id="name" name="name" placeholder="Alex Example" maxlength="100" required>
-					<label for="email">Email address (required)</label>
-					<input type="email" id="email" name="email" placeholder="alex@example.com" maxlength="150" required>
-					<label for="phone">Phone number (optional)</label>
-					<input type="tel" id="phone" name="phone" maxlength="30">
-				</fieldset>
-				<fieldset>
-					<legend>Your message</legend>
-					<label for="page">Page name (optional)</label>
-					<select id="page" name="page">
-						<option value="">Choose a page</option>
-						<option value="home">Home</option>
-						<option value="food-options">Food options</option>
-						<option value="opening-hours">Opening hours</option>
-						<option value="plan-your-visit">Plan your visit</option>
-						<option value="food-on-a-budget">Food on a budget</option>
-					</select>
-					<label for="message">Question or correction (required)</label>
-					<textarea id="message" name="message" rows="6" minlength="10" maxlength="2000" placeholder="Tell us what needs checking." required></textarea>
-				</fieldset>
-				<input type="submit" value="Send message">
-			</form>
-		</section>
-		<aside class="tip">
-			<h2>Question about an order?</h2>
-			<p>Contact the restaurant directly for orders, menu questions or dietary requirements. You can find its details on the <a href="food-options.html">food options page</a>.</p>
+		<main>
+			<header>
+				<figure>
+					<img src="img/contact.svg" alt="" title="Contact icon">
+					<figcaption>Helping you find late-night food</figcaption>
+				</figure>
+				<h1>Ask a question or flag an error</h1>
+				<p>Have a question about the guide, or noticed something that needs changing? Use the form below.</p>
+			</header>
+			<section>
+				<h2>Your question or correction</h2>
+				<p>Fields marked required must be filled in.</p>
+				<p>testing form</p>
+				<form action="https://next-app-router-playground-kohl.vercel.app/api/contact" method="post">
+					<fieldset>
+						<legend>Contact form</legend>
+						<label for="name">Name (required)</label>
+						<input type="text" id="name" name="name" placeholder="Your name" maxlength="100" required>
+						<label for="email">Email (required)</label>
+						<input type="email" id="email" name="email" placeholder="Your email" maxlength="150" required>
+						<label for="message">Message (required)</label>
+						<textarea id="message" name="message" rows="6" minlength="10" maxlength="2000" placeholder="Your question or correction" required></textarea>
+						<input type="submit" value="Send message">
+					</fieldset>
+				</form>
+			</section>
+			<aside>
+				<h2>Question about an order?</h2>
+				<p>Contact the restaurant directly for orders, menu questions or dietary requirements. You can find its details on the <a href="food-options.html">food options page</a>.</p>
+			</aside>
+		</main>
+		<footer>
+			<p>&copy; 2026 Tiger Meuter &middot; Late Night Eats</p>
+		</footer>
+		<aside class="cookies">
+			<p>do you allow cookies?</p>
 		</aside>
-	</main>
-	<footer class="site-footer">
-		<p>&copy; 2026 Tiger Meuter &middot; Late Night Eats</p>
-		<p><a href="contact.html">Contact</a></p>
-	</footer>
-	<aside class="cookies">
-		<p>do you allow cookies?</p>
-	</aside>
-</body>
+	</body>
 </html>
