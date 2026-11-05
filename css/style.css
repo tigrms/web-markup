@@ -163,11 +163,7 @@ thead {
 	color: #fff;
 }
 
-tbody tr:nth-child(even) {
-	background-color: #cff;
-}
-
-tbody tr:nth-child(odd) {
+tbody {
 	background-color: #fff;
 }
 
