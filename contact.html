@@ -35,18 +35,27 @@
 			</header>
 			<section>
 				<h2>Your question or correction</h2>
-				<p>Fields marked required must be filled in.</p>
+				<p>All fields are required unless marked optional.</p>
 				<form action="https://next-app-router-playground-kohl.vercel.app/api/contact" method="post">
 					<fieldset>
-						<legend>Contact form</legend>
-						<label for="name">Name (required)</label>
-						<input type="text" id="name" name="name" placeholder="Your name" maxlength="100" required>
-						<label for="email">Email (required)</label>
-						<input type="email" id="email" name="email" placeholder="Your email" maxlength="150" required>
-						<label for="message">Message (required)</label>
-						<textarea id="message" name="message" rows="6" minlength="10" maxlength="2000" placeholder="Your question or correction" required></textarea>
-						<input type="submit" value="Send message">
+						<legend>Title (required)</legend>
+						<label for="mr"><input type="radio" id="mr" name="title" value="Mr" required> Mr</label>
+						<label for="mrs"><input type="radio" id="mrs" name="title" value="Mrs" required> Mrs</label>
+						<label for="mx"><input type="radio" id="mx" name="title" value="Mx" required> Mx</label>
 					</fieldset>
+					<label for="first-name">First name (required)</label>
+					<input type="text" id="first-name" name="name" placeholder="e.g. Alex" maxlength="100" required>
+					<label for="surname">Surname (required)</label>
+					<input type="text" id="surname" name="surname" placeholder="e.g. Example" maxlength="100" required>
+					<label for="email">Email address (required)</label>
+					<input type="email" id="email" name="email" placeholder="e.g. alex@example.com" maxlength="150" required>
+					<label for="telephone">Telephone number (required)</label>
+					<input type="tel" id="telephone" name="telephone" placeholder="e.g. +31 6 1234 5678" maxlength="30" required>
+					<label for="page">Page name (optional)</label>
+					<input type="text" id="page" name="page" placeholder="e.g. Opening hours" maxlength="100">
+					<label for="message">Question/request (required)</label>
+					<textarea id="message" name="message" rows="6" minlength="10" maxlength="2000" placeholder="Tell us what needs checking." required></textarea>
+					<input type="submit" value="Send message">
 				</form>
 			</section>
 			<aside>

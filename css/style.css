@@ -145,6 +145,7 @@ table {
 	width: 100%;
 	margin: 16px 0;
 	border-collapse: collapse;
+	font-size: 1rem;
 }
 
 caption {
@@ -153,18 +154,18 @@ caption {
 }
 
 th, td {
-	padding: 8px;
-	border: 1px solid #767676;
+	padding: 12px;
+	border-bottom: 1px solid #ccc;
 	text-align: left;
-}
-
-thead {
-	background-color: #242424;
-	color: #fff;
+	vertical-align: top;
 }
 
 tbody {
 	background-color: #fff;
+}
+
+td p {
+	margin: 4px 0;
 }
 
 #budget p {
@@ -181,19 +182,28 @@ form {
 
 fieldset {
 	min-width: 0;
-	margin: 16px 0;
-	padding: 16px;
-	border: 1px solid #767676;
+	margin: 24px 0;
+	padding: 0;
+	border: none;
+}
+
+legend {
+	margin-bottom: 16px;
+}
+
+fieldset label {
+	display: inline-block;
+	margin-right: 24px;
 }
 
 label {
 	display: block;
-	margin-bottom: 4px;
+	margin-bottom: 12px;
 }
 
 input, textarea {
 	width: 100%;
-	margin-bottom: 16px;
+	margin-bottom: 24px;
 	padding: 10px;
 	border: 1px solid #767676;
 	font: inherit;
@@ -201,6 +211,15 @@ input, textarea {
 
 textarea {
 	resize: vertical;
+}
+
+input[type="radio"] {
+	width: auto;
+	margin: 0 4px 0 0;
+}
+
+input[type="submit"] {
+	width: 60%;
 }
 
 footer {
