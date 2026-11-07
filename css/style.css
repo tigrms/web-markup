@@ -8,7 +8,6 @@ body {
 	width: 92%;
 	max-width: 1000px;
 	margin: 0 auto;
-	padding-bottom: 90px;
 	background-color: #fff;
 	color: #242424;
 	font-family: 'Source Sans 3', Arial, sans-serif;
@@ -228,22 +227,6 @@ footer {
 	font-size: 1rem;
 }
 
-.cookies {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	z-index: 9999;
-	width: 100%;
-	padding: 10px;
-	border-top: 1px solid #767676;
-	background-color: #f2f2f0;
-	font-size: 0.9rem;
-	text-align: center;
-}
-
-.cookies p {
-	margin: 0;
-}
 
 @media screen and (min-width: 769px) {
 	nav ul {
